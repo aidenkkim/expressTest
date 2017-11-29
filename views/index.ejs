@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= a %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <%include nav/header.ejs%>
+
+    <h1><%= a %></h1>
+    <p>Welcome to <%= name %></p>
+
+  <ul>
+    <%jdata.employees.forEach(function(item){%>
+    <li>
+      <%=item.firstName%>
+    </li>
+    <%})%>
+  </ul>
+  </body>
+</html>
